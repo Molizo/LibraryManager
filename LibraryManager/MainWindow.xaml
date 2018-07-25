@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManager"
         mc:Ignorable="d"
-        Title="Library Manager" Height="301.819" Width="534.545" ResizeMode="CanMinimize">
-    <Grid x:Name="MainGrid" HorizontalAlignment="Left" Width="525" Height="263" VerticalAlignment="Top">
+        Title="Library Manager" Height="317.819" Width="574.545" ResizeMode="CanMinimize" BorderBrush="#FF333337">
+    <Grid x:Name="MainGrid" Background="#FF333337" Margin="0,0,-1,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*" />
             <ColumnDefinition Width="62*" />
         </Grid.ColumnDefinitions>
-        <Grid x:Name="ButtonsGrid" HorizontalAlignment="Left" Height="263" VerticalAlignment="Top" Width="91">
+        <Grid x:Name="ButtonsGrid" Background="#FF2D2D30">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -22,13 +22,13 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button x:Name="InventoryButton" Content="Inventory" HorizontalAlignment="Center" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="InventoryButtonClick" Margin="-1" BorderBrush="#FFDDDDDD" />
-            <Button x:Name="CustomersButton" Content="Customers" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="CustomersButtonClick" Margin="-1" BorderBrush="#FFDDDDDD" />
-            <Button x:Name="SellButton" Content="Sell Items" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="SellButtonClick" BorderBrush="#FFDDDDDD" />
-            <Button x:Name="ReportsButton" Content="Reports" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="ReportsButtonClick" BorderBrush="#FFDDDDDD" />
-            <Button x:Name="OptionsButton" Content="Options" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="OptionsButtonClick" BorderBrush="#FFDDDDDD" />
-            <Button x:Name="LendButton" Content="Lend Items" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="LendButtonClick" BorderBrush="#FFDDDDDD" />
+            <Button x:Name="InventoryButton" Content="Inventory" HorizontalAlignment="Center" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="InventoryButtonClick" Margin="-1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
+            <Button x:Name="CustomersButton" Content="Customers" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="CustomersButtonClick" Margin="-1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
+            <Button x:Name="SellButton" Content="Sell Items" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="SellButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
+            <Button x:Name="ReportsButton" Content="Reports" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="ReportsButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
+            <Button x:Name="OptionsButton" Content="Options" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="OptionsButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
+            <Button x:Name="LendButton" Content="Lend Items" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="LendButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
         </Grid>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This is where the monthly reports will be" VerticalAlignment="Top" />
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This is where the monthly reports will be" VerticalAlignment="Top" Foreground="#FFF0EFF1" />
     </Grid>
 </Window>

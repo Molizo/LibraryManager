@@ -23,7 +23,7 @@ namespace LibraryManager
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Library manager | " + Properties.Settings.Default.libraryName + " | " + Properties.Settings.Default.libraryLocation;
+            this.Title = "Library Manager | " + Properties.Settings.Default.libraryName + " | " + Properties.Settings.Default.libraryLocation;
         }
 
         public void InventoryButtonClick(object sender, RoutedEventArgs e)
