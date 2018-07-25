@@ -23,13 +23,7 @@ namespace LibraryManager
         public MainWindow()
         {
             InitializeComponent();
-            //Associate buttons with methods
-            InventoryButton.Click += InventoryButtonClick;
-            CustomersButton.Click += CustomersButtonClick;
-            LendButton.Click += LendButtonClick;
-            SellButton.Click += SellButtonClick;
-            ReportsButton.Click += ReportsButtonClick;
-            OptionsButton.Click += OptionsButtonClick;
+            this.Title = "Library manager | " + Properties.Settings.Default.libraryName + " | " + Properties.Settings.Default.libraryLocation;
         }
 
         public void InventoryButtonClick(object sender, RoutedEventArgs e)
@@ -60,6 +54,8 @@ namespace LibraryManager
         public void OptionsButtonClick(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("OPTIONS");
+            OptionsWindow optionsWindow = new OptionsWindow();
+            optionsWindow.ShowDialog();
         }
     }
 }
