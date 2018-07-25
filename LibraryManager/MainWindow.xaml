@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManager"
         mc:Ignorable="d"
-        Title="Library Manager" Height="317.819" Width="574.545" ResizeMode="CanMinimize" BorderBrush="#FF333337">
+        Title="Library Manager" Height="317.819" Width="486.545" ResizeMode="CanMinimize" BorderBrush="#FF333337">
     <Grid x:Name="MainGrid" Background="#FF333337" Margin="0,0,-1,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="13*" />
-            <ColumnDefinition Width="62*" />
+            <ColumnDefinition Width="99" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid x:Name="ButtonsGrid" Background="#FF2D2D30">
             <Grid.RowDefinitions>

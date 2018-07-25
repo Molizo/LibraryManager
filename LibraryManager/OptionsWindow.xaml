@@ -1,30 +1,36 @@
-﻿<Window x:Name="OptionsMenu" x:Class="LibraryManager.OptionsWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManager"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="OptionsMenu" x:Class="LibraryManager.OptionsWindow"
         mc:Ignorable="d"
-        Title="Options" Height="351.818" Width="279.091" WindowStyle="ToolWindow" Topmost="True" ResizeMode="NoResize">
+        Title="Options" Height="351.818" Width="279.091" WindowStyle="ToolWindow" Topmost="True" ResizeMode="NoResize" Background="#FF333337">
     <Grid x:Name="MainGrid" Margin="10,10,10,9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71*" />
             <ColumnDefinition Width="200*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="24*" />
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="39*" />
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Center" Margin="2,0,0,0" TextWrapping="Wrap" Text="Library name:" VerticalAlignment="Top" Height="38" Width="64" FontSize="14" />
-        <TextBlock HorizontalAlignment="Left" Margin="2,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Library location:" Width="64" FontSize="14" />
-        <TextBox x:Name="LibraryLocationTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="38" TextWrapping="Wrap" Text="City Center - BUC" VerticalAlignment="Center" Width="185" VerticalContentAlignment="Center" FontSize="18" BorderBrush="White" Padding="3,2,2,2" Background="#FFDDDDDD" Grid.Row="1" />
-        <Button x:Name="SaveButton" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="75" IsDefault="True" Click="SaveButton_Click" />
-        <TextBox x:Name="LibraryNameTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="38" TextWrapping="Wrap" Text="Bookland" VerticalAlignment="Center" Width="185" VerticalContentAlignment="Center" FontSize="18" BorderBrush="White" Padding="3,2,2,2" Background="#FFDDDDDD" />
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Library location:" FontSize="14" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
+        <TextBox x:Name="LibraryLocationTextBox" Grid.Column="1" TextWrapping="Wrap" Text="City Center - BUC" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Grid.Row="1" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
+        <Button x:Name="SaveButton" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="8" VerticalAlignment="Top" Width="75" IsDefault="True" Click="SaveButton_Click" />
+        <TextBox x:Name="LibraryNameTextBox" Grid.Column="1" TextWrapping="Wrap" Text="Bookland" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Foreground="#FFF0EFF1" />
+        <TextBlock x:Name="LibraryNameTextBlock" TextWrapping="Wrap" Text="Library name:" FontSize="14" Foreground="#FFF0EFF1" />
+        <TextBlock x:Name="ThemeTextBlock" Grid.Row="4" TextWrapping="Wrap" Text="Theme:" FontSize="16" Foreground="#FFF0EFF1" Margin="0,8,0,9" />
+        <RadioButton x:Name="LightTheme" Content="Light" Grid.Column="1" HorizontalAlignment="Left" Margin="28,13,0,0" Grid.Row="4" VerticalAlignment="Top" Background="White" Foreground="#FFF0EFF1" Checked="LightTheme_Checked" IsEnabled="False" />
+        <TextBlock x:Name="LibraryLocationTextBlock" Grid.Row="1" TextWrapping="Wrap" Text="Library location:" FontSize="14" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
+        <RadioButton x:Name="DarkTheme" Content="Dark" Grid.Column="1" HorizontalAlignment="Left" Margin="110,13,0,0" Grid.Row="4" VerticalAlignment="Top" Background="White" Foreground="#FFF0EFF1" IsChecked="True" Checked="DarkTheme_Checked" IsEnabled="False" />
     </Grid>
 </Window>
