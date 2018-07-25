@@ -23,6 +23,43 @@ namespace LibraryManager
         public MainWindow()
         {
             InitializeComponent();
+            //Associate buttons with methods
+            InventoryButton.Click += InventoryButtonClick;
+            CustomersButton.Click += CustomersButtonClick;
+            LendButton.Click += LendButtonClick;
+            SellButton.Click += SellButtonClick;
+            ReportsButton.Click += ReportsButtonClick;
+            OptionsButton.Click += OptionsButtonClick;
+        }
+
+        public void InventoryButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("INVENTORY");
+        }
+
+        public void CustomersButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("CUSTOMERS");
+        }
+
+        public void LendButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("LEND");
+        }
+
+        public void SellButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("SELL");
+        }
+
+        public void ReportsButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("REPORTS");
+        }
+
+        public void OptionsButtonClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("OPTIONS");
         }
     }
 }
