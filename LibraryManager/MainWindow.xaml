@@ -29,6 +29,6 @@
             <Button x:Name="OptionsButton" Content="Options" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Click="OptionsButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
             <Button x:Name="LendButton" Content="Lend Items" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="91" Height="33" FontSize="18" Padding="0" Click="LendButtonClick" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FFF0EFF1" Grid.IsSharedSizeScope="True" Style="{StaticResource DarkButtonStyle}" />
         </Grid>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This is where the monthly reports will be" VerticalAlignment="Top" Foreground="#FFF0EFF1" />
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="This is where the top selling books will be" VerticalAlignment="Top" Foreground="#FFF0EFF1" />
     </Grid>
 </Window>

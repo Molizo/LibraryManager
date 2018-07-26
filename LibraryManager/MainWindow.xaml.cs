@@ -29,6 +29,8 @@ namespace LibraryManager
         public void InventoryButtonClick(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("INVENTORY");
+            InventoryWindow inventoryWindow = new InventoryWindow();
+            inventoryWindow.ShowDialog();
         }
 
         public void CustomersButtonClick(object sender, RoutedEventArgs e)
