@@ -89,21 +89,22 @@ namespace LibraryManager
         private void filterItems(string filter)
         {
             List<inventoryItem> filtered = new List<inventoryItem>();
+            filter = filter.ToLower();
             foreach (inventoryItem item in items)
             {
-                if (item.Title.Contains(filter))
+                if (item.Title.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.Author.Contains(filter))
+                else if (item.Author.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.Publisher.Contains(filter))
+                else if (item.Publisher.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.Type.Contains(filter))
+                else if (item.Type.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.ISBN.Contains(filter))
+                else if (item.ISBN.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.Price.Contains(filter))
+                else if (item.Price.ToLower().Contains(filter))
                     filtered.Add(item);
-                else if (item.Stock.Contains(filter))
+                else if (item.Stock.ToLower().Contains(filter))
                     filtered.Add(item);
             }
             InventoryDataGrid.ItemsSource = filtered;
@@ -120,15 +121,20 @@ namespace LibraryManager
                 inventoryItem item = (inventoryItem)InventoryDataGrid.SelectedItem;
                 int index = items.IndexOf(item);
                 StockModifyDialog stockModifyDialog = new StockModifyDialog();
-                if (item.Stock != "Out of stock")
+                stockModifyDialog.Title = "Modify Stock | " + items[index].Title;
+
+                if (item.Stock != "Out of stock" && item.Stock != "Digital Distribution")
                     stockModifyDialog.StockValueTextBox.Text = item.Stock;
                 else
                     stockModifyDialog.StockValueTextBox.Text = "0";
+
                 stockModifyDialog.ShowDialog();
+
                 if (stockModifyDialog.StockValueTextBox.Text != "0")
                     items[index].Stock = stockModifyDialog.StockValueTextBox.Text;
                 else
                     items[index].Stock = "Out of stock";
+
                 InventoryDataGrid.ItemsSource = null;
                 filterItems(SearchBox.Text);
             }

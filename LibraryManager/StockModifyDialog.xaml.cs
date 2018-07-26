@@ -30,12 +30,18 @@ namespace LibraryManager
             this.Close();
         }
 
-        private void OutOfStockButton_Copy_Click(object sender, RoutedEventArgs e)
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             if (StockValueTextBox.Text != String.Empty)
                 StockValueTextBox.Text = Convert.ToUInt32(StockValueTextBox.Text).ToString();
             else
                 StockValueTextBox.Text = "Out of stock";
+            this.Close();
+        }
+
+        private void DigitalDistributionButton_Click(object sender, RoutedEventArgs e)
+        {
+            StockValueTextBox.Text = "Digital Distribution";
             this.Close();
         }
     }

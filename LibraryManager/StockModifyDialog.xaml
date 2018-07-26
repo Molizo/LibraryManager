@@ -14,7 +14,8 @@
         </Grid.RowDefinitions>
         <Label Content="Modify stock value:" Foreground="#FFF1F1F1" FontSize="22" Padding="5,0,0,0" />
         <TextBox x:Name="StockValueTextBox" Margin="2" Grid.Row="1" TextWrapping="Wrap" Background="#FF2D2D30" BorderBrush="#FF3F3F46" Foreground="#FFF1F1F1" FontSize="36" Padding="0,-6,0,0" />
-        <Button x:Name="OutOfStockButton" Content="Out of stock" Margin="3,2,213,2" Grid.Row="2" Foreground="#FFF1F1F1" Background="#FF2D2D30" Click="OutOfStockButton_Click" FontSize="18" Style="{StaticResource DarkButtonStyle}" />
-        <Button x:Name="OutOfStockButton_Copy" Content="Confirm" Margin="214,2,2,2" Grid.Row="2" Foreground="#FFF1F1F1" Background="#FF2D2D30" Click="OutOfStockButton_Copy_Click" FontSize="18" Style="{StaticResource DarkButtonStyle}" />
+        <Button x:Name="OutOfStockButton" Content="Out of stock" Margin="3,2,209,2" Grid.Row="2" Foreground="#FFF1F1F1" Background="#FF2D2D30" Click="OutOfStockButton_Click" FontSize="18" Style="{StaticResource DarkButtonStyle}" />
+        <Button x:Name="ConfirmButton" Content="Confirm" Margin="234,2,2,2" Grid.Row="2" Foreground="#FFF1F1F1" Background="#FF2D2D30" Click="ConfirmButton_Click" FontSize="18" Style="{StaticResource DarkButtonStyle}" />
+        <Button x:Name="DigitalDistributionButton" Content="Digital" Margin="122,2,129,2" Grid.Row="2" Foreground="#FFF1F1F1" Background="#FF2D2D30" Click="DigitalDistributionButton_Click" FontSize="18" Style="{StaticResource DarkButtonStyle}" />
     </Grid>
 </Window>
