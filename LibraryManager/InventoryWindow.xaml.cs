@@ -112,6 +112,12 @@ namespace LibraryManager
 
         private void AddItemButton_Click(object sender, RoutedEventArgs e)
         {
+            AddInventoryDialog addInventoryDialog = new AddInventoryDialog();
+            addInventoryDialog.ShowDialog();
+            items.Clear();
+            loadItems();
+            InventoryDataGrid.ItemsSource = null;
+            filterItems(SearchBox.Text);
         }
 
         private void StockItemButton_Click(object sender, RoutedEventArgs e)

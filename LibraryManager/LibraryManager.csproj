@@ -78,9 +78,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddInventoryDialog.xaml.cs">
+      <DependentUpon>AddInventoryDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StockModifyDialog.xaml.cs">
       <DependentUpon>StockModifyDialog.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddInventoryDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InventoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

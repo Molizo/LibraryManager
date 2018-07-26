@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LibraryManager"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="OptionsMenu" x:Class="LibraryManager.OptionsWindow"
         mc:Ignorable="d"
-        Title="Options" Height="351.818" Width="279.091" WindowStyle="ToolWindow" Topmost="True" ResizeMode="NoResize" Background="#FF333337">
+        Title="Options" Height="351.818" Width="279.091" Topmost="True" ResizeMode="NoResize" Background="#FF333337">
     <Grid x:Name="MainGrid" Margin="10,10,10,9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71*" />
@@ -24,13 +24,13 @@
             <RowDefinition Height="39*" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Library location:" FontSize="14" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
-        <TextBox x:Name="LibraryLocationTextBox" Grid.Column="1" TextWrapping="Wrap" Text="City Center - BUC" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Grid.Row="1" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
-        <Button x:Name="SaveButton" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="8" VerticalAlignment="Top" Width="75" IsDefault="True" Click="SaveButton_Click" />
-        <TextBox x:Name="LibraryNameTextBox" Grid.Column="1" TextWrapping="Wrap" Text="Bookland" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Foreground="#FFF0EFF1" />
+        <TextBox x:Name="LibraryLocationTextBox" Grid.Column="1" TextWrapping="Wrap" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Grid.Row="1" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
+        <TextBox x:Name="LibraryNameTextBox" Grid.Column="1" TextWrapping="Wrap" VerticalContentAlignment="Center" FontSize="18" BorderBrush="#FF3F3F46" Padding="3,2,2,2" Background="#FF2D2D30" Foreground="#FFF0EFF1" />
         <TextBlock x:Name="LibraryNameTextBlock" TextWrapping="Wrap" Text="Library name:" FontSize="14" Foreground="#FFF0EFF1" />
         <TextBlock x:Name="ThemeTextBlock" Grid.Row="4" TextWrapping="Wrap" Text="Theme:" FontSize="16" Foreground="#FFF0EFF1" Margin="0,8,0,9" />
         <RadioButton x:Name="LightTheme" Content="Light" Grid.Column="1" HorizontalAlignment="Left" Margin="28,13,0,0" Grid.Row="4" VerticalAlignment="Top" Background="White" Foreground="#FFF0EFF1" Checked="LightTheme_Checked" IsEnabled="False" />
         <TextBlock x:Name="LibraryLocationTextBlock" Grid.Row="1" TextWrapping="Wrap" Text="Library location:" FontSize="14" Grid.RowSpan="2" Foreground="#FFF0EFF1" />
         <RadioButton x:Name="DarkTheme" Content="Dark" Grid.Column="1" HorizontalAlignment="Left" Margin="110,13,0,0" Grid.Row="4" VerticalAlignment="Top" Background="White" Foreground="#FFF0EFF1" IsChecked="True" Checked="DarkTheme_Checked" IsEnabled="False" />
+        <Button x:Name="SaveButton" Content="Save" Foreground="#FFDDDDDD" FontSize="14" Style="{StaticResource DarkButtonStyle}" Margin="91,10,10,5" Click="SaveButton_Click" Grid.Column="1" Grid.Row="8" Background="#FF252526" IsDefault="True" />
     </Grid>
 </Window>
