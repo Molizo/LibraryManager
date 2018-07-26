@@ -38,6 +38,7 @@ namespace LibraryManager
             InitializeComponent();
             InventoryDataGrid.ItemsSource = items;
             loadItems();
+            this.Title = "Inventory Management | " + Properties.Settings.Default.libraryName + " | " + Properties.Settings.Default.libraryLocation;
         }
 
         private void loadItems()
@@ -82,8 +83,12 @@ namespace LibraryManager
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            filterItems(SearchBox.Text);
+        }
+
+        private void filterItems(string filter)
+        {
             List<inventoryItem> filtered = new List<inventoryItem>();
-            string filter = SearchBox.Text;
             foreach (inventoryItem item in items)
             {
                 if (item.Title.Contains(filter))
@@ -102,6 +107,35 @@ namespace LibraryManager
                     filtered.Add(item);
             }
             InventoryDataGrid.ItemsSource = filtered;
+        }
+
+        private void AddItemButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void StockItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                inventoryItem item = (inventoryItem)InventoryDataGrid.SelectedItem;
+                int index = items.IndexOf(item);
+                StockModifyDialog stockModifyDialog = new StockModifyDialog();
+                if (item.Stock != "Out of stock")
+                    stockModifyDialog.StockValueTextBox.Text = item.Stock;
+                else
+                    stockModifyDialog.StockValueTextBox.Text = "0";
+                stockModifyDialog.ShowDialog();
+                if (stockModifyDialog.StockValueTextBox.Text != "0")
+                    items[index].Stock = stockModifyDialog.StockValueTextBox.Text;
+                else
+                    items[index].Stock = "Out of stock";
+                InventoryDataGrid.ItemsSource = null;
+                filterItems(SearchBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please select an item in the table!", "Warning!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
     }
 }
