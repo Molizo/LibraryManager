@@ -81,6 +81,9 @@
     <Compile Include="AddInventoryDialog.xaml.cs">
       <DependentUpon>AddInventoryDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PriceModifyDialog.xaml.cs">
+      <DependentUpon>PriceModifyDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StockModifyDialog.xaml.cs">
       <DependentUpon>StockModifyDialog.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
     <Page Include="OptionsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PriceModifyDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="StockModifyDialog.xaml">
       <SubType>Designer</SubType>

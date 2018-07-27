@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.IO;
 
 namespace LibraryManager
 {
@@ -141,6 +132,25 @@ namespace LibraryManager
                 else
                     items[index].Stock = "Out of stock";
 
+                InventoryDataGrid.ItemsSource = null;
+                filterItems(SearchBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please select an item in the table!", "Warning!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private void PriceModifyButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                inventoryItem item = (inventoryItem)InventoryDataGrid.SelectedItem;
+                int index = items.IndexOf(item);
+                PriceModifyDialog priceModifyDialog = new PriceModifyDialog();
+                priceModifyDialog.Title = "Modify Price | " + items[index].Title;
+                priceModifyDialog.ShowDialog();
+                items[index].Price = priceModifyDialog.PriceValueTextBox.Text;
                 InventoryDataGrid.ItemsSource = null;
                 filterItems(SearchBox.Text);
             }
