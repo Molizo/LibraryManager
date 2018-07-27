@@ -32,6 +32,22 @@ namespace LibraryManager
             this.Title = "Inventory Management | " + Properties.Settings.Default.libraryName + " | " + Properties.Settings.Default.libraryLocation;
         }
 
+        private void saveItems()
+        {
+            string contents = String.Empty;
+            foreach (inventoryItem item in items)
+            {
+                contents = contents + item.Title + "|" +
+                                      item.Author + "|" +
+                                      item.Publisher + "|" +
+                                      item.Type + "|" +
+                                      item.ISBN + "|" +
+                                      item.Price + "|" +
+                                      item.Stock + System.Environment.NewLine;
+            }
+            File.WriteAllText("inventory.inv", contents);
+        }
+
         private void loadItems()
         {
             if (File.Exists("inventory.inv"))
@@ -134,6 +150,7 @@ namespace LibraryManager
 
                 InventoryDataGrid.ItemsSource = null;
                 filterItems(SearchBox.Text);
+                saveItems();
             }
             catch
             {
@@ -153,6 +170,7 @@ namespace LibraryManager
                 items[index].Price = priceModifyDialog.PriceValueTextBox.Text;
                 InventoryDataGrid.ItemsSource = null;
                 filterItems(SearchBox.Text);
+                saveItems();
             }
             catch
             {

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LibraryManager"
         mc:Ignorable="d"
         Title="Inventory Management"
-        Background="#FF333337" Foreground="#FFF1EADA" SizeToContent="Width" Width="797" MinHeight="596" MinWidth="822">
+        Background="#FF333337" Foreground="#FFF1EADA" SizeToContent="Width" Width="625" MinHeight="450" MinWidth="625">
     <Grid x:Name="MainGrid" Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="214*" />
